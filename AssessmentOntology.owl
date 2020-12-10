@@ -523,6 +523,8 @@
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/assessment#date">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/assessment#Date"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
     </owl:DatatypeProperty>
     
 
@@ -704,6 +706,8 @@
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/assessment#slot">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/assessment#Date"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
@@ -778,6 +782,18 @@
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/assessment#time">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/assessment#Date"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/assessment#timestamp -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/assessment#timestamp">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/assessment#Date"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTimeStamp"/>
     </owl:DatatypeProperty>
     
 

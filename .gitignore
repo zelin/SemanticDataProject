@@ -1,6 +1,8 @@
 *.iml
 .gradle
 /local.properties
+/build
+/Assessment.docx
 /.idea/caches
 /.idea/libraries
 /.idea/modules.xml
