@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   >
+
+    <TextView
+        android:layout_marginLeft="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/montserrat_medium"
+        android:textSize="16sp"
+        android:text="@string/select_query"
+        android:textColor="@android:color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+
+    <TextView android:layout_width="match_parent"
+        android:layout_marginRight="@dimen/_15sdp"
+        android:layout_marginLeft="@dimen/_15sdp"
+        android:gravity="center_vertical"
+        android:id="@+id/queryBtn"
+        android:layout_height="@dimen/_36sdp"
+        android:background="@drawable/edit_gray_bg"
+        android:drawablePadding="@dimen/_10sdp"
+        android:paddingLeft="@dimen/_15sdp"
+        android:paddingRight="@dimen/_15sdp"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:drawableRight="@drawable/right_arrow_small"
+        android:hint="@string/select_query"
+        android:fontFamily="@font/montserrat_medium"
+        android:drawableLeft="@drawable/ic_lock"/>
+
+    <TextView
+        android:layout_marginRight="@dimen/_15sdp"
+        android:layout_marginLeft="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:id="@+id/loginBtn"
+        android:fontFamily="@font/montserrat_bold"
+        android:gravity="center"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:textColor="@android:color/white"
+        android:text="@string/submit"
+        android:textSize="@dimen/_14sdp"
+        android:background="@drawable/logout_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/listView"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        />
+
+</LinearLayout>

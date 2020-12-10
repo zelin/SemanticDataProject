@@ -1,0 +1,1490 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.food.com/ontology#"
+     xml:base="http://www.food.com/ontology"
+     xmlns:ns="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:ontology="http://www.movies.com/ontology#">
+    <owl:Ontology rdf:about="http://www.movies.com/ontology"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2003/06/sw-vocab-status/ns#term_status -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.movies.com/ontology#has_cast -->
+
+    <owl:ObjectProperty rdf:about="http://www.movies.com/ontology#has_cast">
+        <rdfs:domain rdf:resource="http://www.movies.com/ontology#Movie"/>
+        <rdfs:range rdf:resource="http://www.movies.com/ontology#Actor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.movies.com/ontology#has_certification -->
+
+    <owl:ObjectProperty rdf:about="http://www.movies.com/ontology#has_certification">
+        <rdfs:domain rdf:resource="http://www.movies.com/ontology#Movie"/>
+        <rdfs:range rdf:resource="http://www.movies.com/ontology#Certification"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.movies.com/ontology#has_character -->
+
+    <owl:ObjectProperty rdf:about="http://www.movies.com/ontology#has_character">
+        <rdfs:domain rdf:resource="http://www.movies.com/ontology#Script"/>
+        <rdfs:range rdf:resource="http://www.movies.com/ontology#Character"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.movies.com/ontology#has_crew -->
+
+    <owl:ObjectProperty rdf:about="http://www.movies.com/ontology#has_crew">
+        <rdfs:domain rdf:resource="http://www.movies.com/ontology#Movie"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.movies.com/ontology#has_director -->
+
+    <owl:ObjectProperty rdf:about="http://www.movies.com/ontology#has_director">
+        <rdfs:domain rdf:resource="http://www.movies.com/ontology#Movie"/>
+        <rdfs:range rdf:resource="http://www.movies.com/ontology#Director"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.movies.com/ontology#has_genre -->
+
+    <owl:ObjectProperty rdf:about="http://www.movies.com/ontology#has_genre">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.movies.com/ontology#Movie"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.movies.com/ontology#has_keyword -->
+
+    <owl:ObjectProperty rdf:about="http://www.movies.com/ontology#has_keyword">
+        <rdfs:domain rdf:resource="http://www.movies.com/ontology#Movie"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.movies.com/ontology#has_nomination -->
+
+    <owl:ObjectProperty rdf:about="http://www.movies.com/ontology#has_nomination">
+        <rdfs:domain rdf:resource="http://www.movies.com/ontology#Award"/>
+        <rdfs:range rdf:resource="http://www.movies.com/ontology#Nomination"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.movies.com/ontology#has_review -->
+
+    <owl:ObjectProperty rdf:about="http://www.movies.com/ontology#has_review">
+        <rdfs:domain rdf:resource="http://www.movies.com/ontology#Movie"/>
+        <rdfs:range rdf:resource="http://www.movies.com/ontology#Review"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.movies.com/ontology#has_script -->
+
+    <owl:ObjectProperty rdf:about="http://www.movies.com/ontology#has_script">
+        <rdfs:domain rdf:resource="http://www.movies.com/ontology#Movie"/>
+        <rdfs:range rdf:resource="http://www.movies.com/ontology#Script"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.movies.com/ontology#has_series -->
+
+    <owl:ObjectProperty rdf:about="http://www.movies.com/ontology#has_series">
+        <rdfs:domain rdf:resource="http://www.movies.com/ontology#Movie"/>
+        <rdfs:range rdf:resource="http://www.movies.com/ontology#Series"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.movies.com/ontology#knows -->
+
+    <owl:ObjectProperty rdf:about="http://www.movies.com/ontology#knows">
+        <rdfs:domain rdf:resource="http://www.movies.com/ontology#Person"/>
+        <rdfs:range rdf:resource="http://www.movies.com/ontology#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.movies.com/ontology#nominated_for -->
+
+    <owl:ObjectProperty rdf:about="http://www.movies.com/ontology#nominated_for">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.movies.com/ontology#Actor"/>
+                    <rdf:Description rdf:about="http://www.movies.com/ontology#Director"/>
+                    <rdf:Description rdf:about="http://www.movies.com/ontology#Movie"/>
+                    <rdf:Description rdf:about="http://www.movies.com/ontology#Producer"/>
+                    <rdf:Description rdf:about="http://www.movies.com/ontology#Song_Writer"/>
+                    <rdf:Description rdf:about="http://www.movies.com/ontology#Story_Writer"/>
+                    <rdf:Description rdf:about="http://www.movies.com/ontology#Writer"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.movies.com/ontology#Nomination_Category"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.movies.com/ontology#played -->
+
+    <owl:ObjectProperty rdf:about="http://www.movies.com/ontology#played">
+        <owl:inverseOf rdf:resource="http://www.movies.com/ontology#played_by"/>
+        <rdfs:domain rdf:resource="http://www.movies.com/ontology#Actor"/>
+        <rdfs:range rdf:resource="http://www.movies.com/ontology#Character"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.movies.com/ontology#played_by -->
+
+    <owl:ObjectProperty rdf:about="http://www.movies.com/ontology#played_by">
+        <rdfs:domain rdf:resource="http://www.movies.com/ontology#Character"/>
+        <rdfs:range rdf:resource="http://www.movies.com/ontology#Actor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.movies.com/ontology#premiere -->
+
+    <owl:ObjectProperty rdf:about="http://www.movies.com/ontology#premiere">
+        <rdfs:domain rdf:resource="http://www.movies.com/ontology#Movie"/>
+        <rdfs:range rdf:resource="http://www.movies.com/ontology#Premiere"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.movies.com/ontology#receive_award -->
+
+    <owl:ObjectProperty rdf:about="http://www.movies.com/ontology#receive_award">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.movies.com/ontology#Actor"/>
+                    <rdf:Description rdf:about="http://www.movies.com/ontology#Choreographer"/>
+                    <rdf:Description rdf:about="http://www.movies.com/ontology#Director"/>
+                    <rdf:Description rdf:about="http://www.movies.com/ontology#Graphic_Designer"/>
+                    <rdf:Description rdf:about="http://www.movies.com/ontology#Movie"/>
+                    <rdf:Description rdf:about="http://www.movies.com/ontology#Producer"/>
+                    <rdf:Description rdf:about="http://www.movies.com/ontology#Song_Writer"/>
+                    <rdf:Description rdf:about="http://www.movies.com/ontology#Story_Writer"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.movies.com/ontology#Award"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.movies.com/ontology#sound_mix_by -->
+
+    <owl:ObjectProperty rdf:about="http://www.movies.com/ontology#sound_mix_by">
+        <rdfs:domain rdf:resource="http://www.movies.com/ontology#Movie"/>
+        <rdfs:range rdf:resource="http://www.movies.com/ontology#Sound_Mix"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.movies.com/ontology#spoken_language -->
+
+    <owl:ObjectProperty rdf:about="http://www.movies.com/ontology#spoken_language">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.movies.com/ontology#Movie"/>
+        <rdfs:range rdf:resource="http://www.movies.com/ontology#Spoken_Language"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.movies.com/ontology#voice_by -->
+
+    <owl:ObjectProperty rdf:about="http://www.movies.com/ontology#voice_by">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.movies.com/ontology#Character"/>
+        <rdfs:range rdf:resource="http://www.movies.com/ontology#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.movies.com/ontology#written_by -->
+
+    <owl:ObjectProperty rdf:about="http://www.movies.com/ontology#written_by">
+        <rdfs:domain rdf:resource="http://www.movies.com/ontology#Script"/>
+        <rdfs:range rdf:resource="http://www.movies.com/ontology#Story_Writer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.movies.com/ontology#aspect_ratio -->
+
+    <owl:DatatypeProperty rdf:about="http://www.movies.com/ontology#aspect_ratio">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.movies.com/ontology#Movie"/>
+                    <rdf:Description rdf:about="http://www.movies.com/ontology#Presentation"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.movies.com/ontology#cinematographic_process -->
+
+    <owl:DatatypeProperty rdf:about="http://www.movies.com/ontology#cinematographic_process">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.movies.com/ontology#Movie"/>
+                    <rdf:Description rdf:about="http://www.movies.com/ontology#Presentation"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.movies.com/ontology#city -->
+
+    <owl:DatatypeProperty rdf:about="http://www.movies.com/ontology#city"/>
+    
+
+
+    <!-- http://www.movies.com/ontology#color_info -->
+
+    <owl:DatatypeProperty rdf:about="http://www.movies.com/ontology#color_info">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.movies.com/ontology#Movie"/>
+                    <rdf:Description rdf:about="http://www.movies.com/ontology#Presentation"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.movies.com/ontology#cost -->
+
+    <owl:DatatypeProperty rdf:about="http://www.movies.com/ontology#cost">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.movies.com/ontology#date -->
+
+    <owl:DatatypeProperty rdf:about="http://www.movies.com/ontology#date">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.movies.com/ontology#date_of_birth -->
+
+    <owl:DatatypeProperty rdf:about="http://www.movies.com/ontology#date_of_birth">
+        <rdfs:subPropertyOf rdf:resource="http://www.movies.com/ontology#date"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.movies.com/ontology#date_of_release -->
+
+    <owl:DatatypeProperty rdf:about="http://www.movies.com/ontology#date_of_release">
+        <rdfs:subPropertyOf rdf:resource="http://www.movies.com/ontology#date"/>
+        <rdfs:domain rdf:resource="http://www.movies.com/ontology#Movie"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.movies.com/ontology#description -->
+
+    <owl:DatatypeProperty rdf:about="http://www.movies.com/ontology#description">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.movies.com/ontology#Character"/>
+                    <rdf:Description rdf:about="http://www.movies.com/ontology#Script"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.movies.com/ontology#duration -->
+
+    <owl:DatatypeProperty rdf:about="http://www.movies.com/ontology#duration">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.movies.com/ontology#first_name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.movies.com/ontology#first_name">
+        <rdfs:domain rdf:resource="http://www.movies.com/ontology#Person"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.movies.com/ontology#last_name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.movies.com/ontology#last_name">
+        <rdfs:domain rdf:resource="http://www.movies.com/ontology#Person"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.movies.com/ontology#name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.movies.com/ontology#name">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.movies.com/ontology#Company"/>
+                    <rdf:Description rdf:about="http://www.movies.com/ontology#Language"/>
+                    <rdf:Description rdf:about="http://www.movies.com/ontology#Person"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.movies.com/ontology#print_format -->
+
+    <owl:DatatypeProperty rdf:about="http://www.movies.com/ontology#print_format">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.movies.com/ontology#Movie"/>
+                    <rdf:Description rdf:about="http://www.movies.com/ontology#Presentation"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.movies.com/ontology#sequence -->
+
+    <owl:DatatypeProperty rdf:about="http://www.movies.com/ontology#sequence"/>
+    
+
+
+    <!-- http://www.movies.com/ontology#story -->
+
+    <owl:DatatypeProperty rdf:about="http://www.movies.com/ontology#story">
+        <rdfs:domain rdf:resource="http://www.movies.com/ontology#Script"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.movies.com/ontology#thumbnail -->
+
+    <owl:DatatypeProperty rdf:about="http://www.movies.com/ontology#thumbnail"/>
+    
+
+
+    <!-- http://www.movies.com/ontology#title -->
+
+    <owl:DatatypeProperty rdf:about="http://www.movies.com/ontology#title">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.movies.com/ontology#Movie"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.movies.com/ontology#Action -->
+
+    <owl:Class rdf:about="http://www.movies.com/ontology#Action">
+        <rdfs:subClassOf rdf:resource="http://www.movies.com/ontology#Genre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.movies.com/ontology#Action_Comedy -->
+
+    <owl:Class rdf:about="http://www.movies.com/ontology#Action_Comedy">
+        <rdfs:subClassOf rdf:resource="http://www.movies.com/ontology#Comedy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.movies.com/ontology#Actor -->
+
+    <owl:Class rdf:about="http://www.movies.com/ontology#Actor">
+        <rdfs:subClassOf rdf:resource="http://www.movies.com/ontology#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.movies.com/ontology#Adventure -->
+
+    <owl:Class rdf:about="http://www.movies.com/ontology#Adventure">
+        <rdfs:subClassOf rdf:resource="http://www.movies.com/ontology#Genre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.movies.com/ontology#Animation -->
+
+    <owl:Class rdf:about="http://www.movies.com/ontology#Animation">
+        <rdfs:subClassOf rdf:resource="http://www.movies.com/ontology#Genre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.movies.com/ontology#Award -->
+
+    <owl:Class rdf:about="http://www.movies.com/ontology#Award"/>
+    
+
+
+    <!-- http://www.movies.com/ontology#Biography -->
+
+    <owl:Class rdf:about="http://www.movies.com/ontology#Biography">
+        <rdfs:subClassOf rdf:resource="http://www.movies.com/ontology#Genre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.movies.com/ontology#Camera_Man -->
+
+    <owl:Class rdf:about="http://www.movies.com/ontology#Camera_Man">
+        <rdfs:subClassOf rdf:resource="http://www.movies.com/ontology#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.movies.com/ontology#Caption -->
+
+    <owl:Class rdf:about="http://www.movies.com/ontology#Caption"/>
+    
+
+
+    <!-- http://www.movies.com/ontology#Certification -->
+
+    <owl:Class rdf:about="http://www.movies.com/ontology#Certification"/>
+    
+
+
+    <!-- http://www.movies.com/ontology#Character -->
+
+    <owl:Class rdf:about="http://www.movies.com/ontology#Character"/>
+    
+
+
+    <!-- http://www.movies.com/ontology#Choreographer -->
+
+    <owl:Class rdf:about="http://www.movies.com/ontology#Choreographer">
+        <rdfs:subClassOf rdf:resource="http://www.movies.com/ontology#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.movies.com/ontology#City -->
+
+    <owl:Class rdf:about="http://www.movies.com/ontology#City">
+        <rdfs:subClassOf rdf:resource="http://www.movies.com/ontology#Location"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.movies.com/ontology#Comedy -->
+
+    <owl:Class rdf:about="http://www.movies.com/ontology#Comedy">
+        <rdfs:subClassOf rdf:resource="http://www.movies.com/ontology#Genre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.movies.com/ontology#Company -->
+
+    <owl:Class rdf:about="http://www.movies.com/ontology#Company"/>
+    
+
+
+    <!-- http://www.movies.com/ontology#Country -->
+
+    <owl:Class rdf:about="http://www.movies.com/ontology#Country">
+        <rdfs:subClassOf rdf:resource="http://www.movies.com/ontology#Location"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.movies.com/ontology#Crime -->
+
+    <owl:Class rdf:about="http://www.movies.com/ontology#Crime">
+        <rdfs:subClassOf rdf:resource="http://www.movies.com/ontology#Genre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.movies.com/ontology#Dark_Comedy -->
+
+    <owl:Class rdf:about="http://www.movies.com/ontology#Dark_Comedy">
+        <rdfs:subClassOf rdf:resource="http://www.movies.com/ontology#Comedy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.movies.com/ontology#Designer -->
+
+    <owl:Class rdf:about="http://www.movies.com/ontology#Designer">
+        <rdfs:subClassOf rdf:resource="http://www.movies.com/ontology#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.movies.com/ontology#Director -->
+
+    <owl:Class rdf:about="http://www.movies.com/ontology#Director">
+        <rdfs:subClassOf rdf:resource="http://www.movies.com/ontology#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.movies.com/ontology#Distributor -->
+
+    <owl:Class rdf:about="http://www.movies.com/ontology#Distributor">
+        <rdfs:subClassOf rdf:resource="http://www.movies.com/ontology#Company"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.movies.com/ontology#Documentary -->
+
+    <owl:Class rdf:about="http://www.movies.com/ontology#Documentary">
+        <rdfs:subClassOf rdf:resource="http://www.movies.com/ontology#Genre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.movies.com/ontology#Drama -->
+
+    <owl:Class rdf:about="http://www.movies.com/ontology#Drama">
+        <rdfs:subClassOf rdf:resource="http://www.movies.com/ontology#Genre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.movies.com/ontology#Dress_Designer -->
+
+    <owl:Class rdf:about="http://www.movies.com/ontology#Dress_Designer">
+        <rdfs:subClassOf rdf:resource="http://www.movies.com/ontology#Designer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.movies.com/ontology#Editor -->
+
+    <owl:Class rdf:about="http://www.movies.com/ontology#Editor">
+        <rdfs:subClassOf rdf:resource="http://www.movies.com/ontology#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.movies.com/ontology#Fantasy -->
+
+    <owl:Class rdf:about="http://www.movies.com/ontology#Fantasy">
+        <rdfs:subClassOf rdf:resource="http://www.movies.com/ontology#Genre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.movies.com/ontology#Genre -->
+
+    <owl:Class rdf:about="http://www.movies.com/ontology#Genre"/>
+    
+
+
+    <!-- http://www.movies.com/ontology#Geo_Location -->
+
+    <owl:Class rdf:about="http://www.movies.com/ontology#Geo_Location">
+        <rdfs:subClassOf rdf:resource="http://www.movies.com/ontology#Location"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.movies.com/ontology#Graphic_Designer -->
+
+    <owl:Class rdf:about="http://www.movies.com/ontology#Graphic_Designer">
+        <rdfs:subClassOf rdf:resource="http://www.movies.com/ontology#Designer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.movies.com/ontology#Horror -->
+
+    <owl:Class rdf:about="http://www.movies.com/ontology#Horror">
+        <rdfs:subClassOf rdf:resource="http://www.movies.com/ontology#Genre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.movies.com/ontology#Language -->
+
+    <owl:Class rdf:about="http://www.movies.com/ontology#Language"/>
+    
+
+
+    <!-- http://www.movies.com/ontology#Location -->
+
+    <owl:Class rdf:about="http://www.movies.com/ontology#Location"/>
+    
+
+
+    <!-- http://www.movies.com/ontology#Makeup_Artist -->
+
+    <owl:Class rdf:about="http://www.movies.com/ontology#Makeup_Artist">
+        <rdfs:subClassOf rdf:resource="http://www.movies.com/ontology#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.movies.com/ontology#Movie -->
+
+    <owl:Class rdf:about="http://www.movies.com/ontology#Movie">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.movies.com/ontology#has_cast"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.movies.com/ontology#Actor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.movies.com/ontology#Musical -->
+
+    <owl:Class rdf:about="http://www.movies.com/ontology#Musical">
+        <rdfs:subClassOf rdf:resource="http://www.movies.com/ontology#Genre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.movies.com/ontology#Musician -->
+
+    <owl:Class rdf:about="http://www.movies.com/ontology#Musician">
+        <rdfs:subClassOf rdf:resource="http://www.movies.com/ontology#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.movies.com/ontology#Mystery -->
+
+    <owl:Class rdf:about="http://www.movies.com/ontology#Mystery">
+        <rdfs:subClassOf rdf:resource="http://www.movies.com/ontology#Genre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.movies.com/ontology#Nomination -->
+
+    <owl:Class rdf:about="http://www.movies.com/ontology#Nomination"/>
+    
+
+
+    <!-- http://www.movies.com/ontology#Nomination_Category -->
+
+    <owl:Class rdf:about="http://www.movies.com/ontology#Nomination_Category"/>
+    
+
+
+    <!-- http://www.movies.com/ontology#Person -->
+
+    <owl:Class rdf:about="http://www.movies.com/ontology#Person"/>
+    
+
+
+    <!-- http://www.movies.com/ontology#Premiere -->
+
+    <owl:Class rdf:about="http://www.movies.com/ontology#Premiere"/>
+    
+
+
+    <!-- http://www.movies.com/ontology#Presentation -->
+
+    <owl:Class rdf:about="http://www.movies.com/ontology#Presentation"/>
+    
+
+
+    <!-- http://www.movies.com/ontology#Producer -->
+
+    <owl:Class rdf:about="http://www.movies.com/ontology#Producer">
+        <rdfs:subClassOf rdf:resource="http://www.movies.com/ontology#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.movies.com/ontology#Production_Company -->
+
+    <owl:Class rdf:about="http://www.movies.com/ontology#Production_Company">
+        <rdfs:subClassOf rdf:resource="http://www.movies.com/ontology#Company"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.movies.com/ontology#Publisher -->
+
+    <owl:Class rdf:about="http://www.movies.com/ontology#Publisher">
+        <rdfs:subClassOf rdf:resource="http://www.movies.com/ontology#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.movies.com/ontology#Review -->
+
+    <owl:Class rdf:about="http://www.movies.com/ontology#Review"/>
+    
+
+
+    <!-- http://www.movies.com/ontology#Romance -->
+
+    <owl:Class rdf:about="http://www.movies.com/ontology#Romance">
+        <rdfs:subClassOf rdf:resource="http://www.movies.com/ontology#Genre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.movies.com/ontology#Sci-Fi -->
+
+    <owl:Class rdf:about="http://www.movies.com/ontology#Sci-Fi">
+        <rdfs:subClassOf rdf:resource="http://www.movies.com/ontology#Genre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.movies.com/ontology#Script -->
+
+    <owl:Class rdf:about="http://www.movies.com/ontology#Script"/>
+    
+
+
+    <!-- http://www.movies.com/ontology#Series -->
+
+    <owl:Class rdf:about="http://www.movies.com/ontology#Series"/>
+    
+
+
+    <!-- http://www.movies.com/ontology#Set_Designer -->
+
+    <owl:Class rdf:about="http://www.movies.com/ontology#Set_Designer">
+        <rdfs:subClassOf rdf:resource="http://www.movies.com/ontology#Designer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.movies.com/ontology#Song_Writer -->
+
+    <owl:Class rdf:about="http://www.movies.com/ontology#Song_Writer">
+        <rdfs:subClassOf rdf:resource="http://www.movies.com/ontology#Writer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.movies.com/ontology#Sound_Mix -->
+
+    <owl:Class rdf:about="http://www.movies.com/ontology#Sound_Mix">
+        <rdfs:subClassOf rdf:resource="http://www.movies.com/ontology#Company"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.movies.com/ontology#Spoken_Language -->
+
+    <owl:Class rdf:about="http://www.movies.com/ontology#Spoken_Language">
+        <rdfs:subClassOf rdf:resource="http://www.movies.com/ontology#Language"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.movies.com/ontology#Story_Writer -->
+
+    <owl:Class rdf:about="http://www.movies.com/ontology#Story_Writer">
+        <rdfs:subClassOf rdf:resource="http://www.movies.com/ontology#Writer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.movies.com/ontology#Stunt_Man -->
+
+    <owl:Class rdf:about="http://www.movies.com/ontology#Stunt_Man">
+        <rdfs:subClassOf rdf:resource="http://www.movies.com/ontology#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.movies.com/ontology#Thriller -->
+
+    <owl:Class rdf:about="http://www.movies.com/ontology#Thriller">
+        <rdfs:subClassOf rdf:resource="http://www.movies.com/ontology#Genre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.movies.com/ontology#Venue -->
+
+    <owl:Class rdf:about="http://www.movies.com/ontology#Venue"/>
+    
+
+
+    <!-- http://www.movies.com/ontology#Writer -->
+
+    <owl:Class rdf:about="http://www.movies.com/ontology#Writer">
+        <rdfs:subClassOf rdf:resource="http://www.movies.com/ontology#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.movies.com/ontology#Carol_Peletier -->
+
+    <owl:NamedIndividual rdf:about="http://www.movies.com/ontology#Carol_Peletier">
+        <rdf:type rdf:resource="http://www.movies.com/ontology#Character"/>
+        <ontology:played_by rdf:resource="http://www.movies.com/ontology#Melissa_McBride"/>
+        <ontology:name>Carol Peletier</ontology:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movies.com/ontology#Danny_Elfman -->
+
+    <owl:NamedIndividual rdf:about="http://www.movies.com/ontology#Danny_Elfman">
+        <rdf:type rdf:resource="http://www.movies.com/ontology#Actor"/>
+        <ontology:knows rdf:resource="http://www.movies.com/ontology#Jane_Akinston"/>
+        <ontology:name>Danny Elfman</ontology:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movies.com/ontology#Daryl_Dixon -->
+
+    <owl:NamedIndividual rdf:about="http://www.movies.com/ontology#Daryl_Dixon">
+        <rdf:type rdf:resource="http://www.movies.com/ontology#Character"/>
+        <ontology:played_by rdf:resource="http://www.movies.com/ontology#Norman_Reedus"/>
+        <ontology:name>Daryl Dixon</ontology:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movies.com/ontology#Jack_Skellington -->
+
+    <owl:NamedIndividual rdf:about="http://www.movies.com/ontology#Jack_Skellington">
+        <rdf:type rdf:resource="http://www.movies.com/ontology#Character"/>
+        <ontology:voice_by rdf:resource="http://www.movies.com/ontology#Danny_Elfman"/>
+        <ontology:name>Jack Skellington</ontology:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movies.com/ontology#Jane_Akinston -->
+
+    <owl:NamedIndividual rdf:about="http://www.movies.com/ontology#Jane_Akinston">
+        <rdf:type rdf:resource="http://www.movies.com/ontology#Actor"/>
+        <ontology:knows rdf:resource="http://www.movies.com/ontology#Melissa_McBride"/>
+        <ontology:knows rdf:resource="http://www.movies.com/ontology#Norman_Reedus"/>
+        <ontology:played rdf:resource="http://www.movies.com/ontology#Rachael"/>
+        <ontology:name>Jane Akinston</ontology:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movies.com/ontology#Melissa_McBride -->
+
+    <owl:NamedIndividual rdf:about="http://www.movies.com/ontology#Melissa_McBride">
+        <rdf:type rdf:resource="http://www.movies.com/ontology#Actor"/>
+        <ontology:knows rdf:resource="http://www.movies.com/ontology#Norman_Reedus"/>
+        <ontology:name>Melissa McBride</ontology:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movies.com/ontology#Norman_Reedus -->
+
+    <owl:NamedIndividual rdf:about="http://www.movies.com/ontology#Norman_Reedus">
+        <rdf:type rdf:resource="http://www.movies.com/ontology#Actor"/>
+        <ontology:name>Norman Reedus</ontology:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movies.com/ontology#Rachael -->
+
+    <owl:NamedIndividual rdf:about="http://www.movies.com/ontology#Rachael">
+        <rdf:type rdf:resource="http://www.movies.com/ontology#Character"/>
+        <ontology:name>Raechel</ontology:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movies.com/ontology#arabic -->
+
+    <owl:NamedIndividual rdf:about="http://www.movies.com/ontology#arabic">
+        <rdf:type rdf:resource="http://www.movies.com/ontology#Spoken_Language"/>
+        <ontology:name>Arabic</ontology:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movies.com/ontology#cambridge -->
+
+    <owl:NamedIndividual rdf:about="http://www.movies.com/ontology#cambridge">
+        <rdf:type rdf:resource="http://www.movies.com/ontology#City"/>
+        <ontology:name>Cambridge</ontology:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movies.com/ontology#cat_best_actor -->
+
+    <owl:NamedIndividual rdf:about="http://www.movies.com/ontology#cat_best_actor">
+        <rdf:type rdf:resource="http://www.movies.com/ontology#Nomination_Category"/>
+        <ontology:name>Best Actor</ontology:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movies.com/ontology#cat_best_director -->
+
+    <owl:NamedIndividual rdf:about="http://www.movies.com/ontology#cat_best_director">
+        <rdf:type rdf:resource="http://www.movies.com/ontology#Nomination_Category"/>
+        <ontology:name>Best Director</ontology:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movies.com/ontology#cat_movie -->
+
+    <owl:NamedIndividual rdf:about="http://www.movies.com/ontology#cat_movie">
+        <rdf:type rdf:resource="http://www.movies.com/ontology#Nomination_Category"/>
+        <ontology:name>Best Movie of the year</ontology:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movies.com/ontology#cat_producer -->
+
+    <owl:NamedIndividual rdf:about="http://www.movies.com/ontology#cat_producer">
+        <rdf:type rdf:resource="http://www.movies.com/ontology#Nomination_Category"/>
+        <ontology:name>Best Producer</ontology:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movies.com/ontology#cat_story -->
+
+    <owl:NamedIndividual rdf:about="http://www.movies.com/ontology#cat_story">
+        <rdf:type rdf:resource="http://www.movies.com/ontology#Nomination_Category"/>
+        <ontology:name>Best Script Writing</ontology:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movies.com/ontology#chinese -->
+
+    <owl:NamedIndividual rdf:about="http://www.movies.com/ontology#chinese">
+        <rdf:type rdf:resource="http://www.movies.com/ontology#Spoken_Language"/>
+        <ontology:name>Chinese</ontology:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movies.com/ontology#dolby_digital -->
+
+    <owl:NamedIndividual rdf:about="http://www.movies.com/ontology#dolby_digital">
+        <rdf:type rdf:resource="http://www.movies.com/ontology#Sound_Mix"/>
+        <ontology:name>Dolby Digital (Sound Mix)</ontology:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movies.com/ontology#english -->
+
+    <owl:NamedIndividual rdf:about="http://www.movies.com/ontology#english">
+        <rdf:type rdf:resource="http://www.movies.com/ontology#Spoken_Language"/>
+        <ontology:name>English</ontology:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movies.com/ontology#french -->
+
+    <owl:NamedIndividual rdf:about="http://www.movies.com/ontology#french">
+        <rdf:type rdf:resource="http://www.movies.com/ontology#Spoken_Language"/>
+        <ontology:name>French</ontology:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movies.com/ontology#genere_action_comedy -->
+
+    <owl:NamedIndividual rdf:about="http://www.movies.com/ontology#genere_action_comedy">
+        <rdf:type rdf:resource="http://www.movies.com/ontology#Action_Comedy"/>
+        <rdf:type rdf:resource="http://www.movies.com/ontology#Comedy"/>
+        <rdf:type rdf:resource="http://www.movies.com/ontology#Genre"/>
+        <ontology:name>Action Comedy</ontology:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movies.com/ontology#genre_action -->
+
+    <owl:NamedIndividual rdf:about="http://www.movies.com/ontology#genre_action">
+        <rdf:type rdf:resource="http://www.movies.com/ontology#Action"/>
+        <rdf:type rdf:resource="http://www.movies.com/ontology#Genre"/>
+        <ontology:name>Action</ontology:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movies.com/ontology#genre_adventure -->
+
+    <owl:NamedIndividual rdf:about="http://www.movies.com/ontology#genre_adventure">
+        <rdf:type rdf:resource="http://www.movies.com/ontology#Adventure"/>
+        <rdf:type rdf:resource="http://www.movies.com/ontology#Genre"/>
+        <ontology:name>Adventure</ontology:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movies.com/ontology#genre_animation -->
+
+    <owl:NamedIndividual rdf:about="http://www.movies.com/ontology#genre_animation">
+        <rdf:type rdf:resource="http://www.movies.com/ontology#Animation"/>
+        <rdf:type rdf:resource="http://www.movies.com/ontology#Genre"/>
+        <ontology:name>Animation</ontology:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movies.com/ontology#genre_biograpy -->
+
+    <owl:NamedIndividual rdf:about="http://www.movies.com/ontology#genre_biograpy">
+        <rdf:type rdf:resource="http://www.movies.com/ontology#Biography"/>
+        <rdf:type rdf:resource="http://www.movies.com/ontology#Genre"/>
+        <ontology:name>Biogrphy</ontology:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movies.com/ontology#genre_comedy -->
+
+    <owl:NamedIndividual rdf:about="http://www.movies.com/ontology#genre_comedy">
+        <rdf:type rdf:resource="http://www.movies.com/ontology#Comedy"/>
+        <rdf:type rdf:resource="http://www.movies.com/ontology#Genre"/>
+        <ontology:name>Comedy</ontology:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movies.com/ontology#genre_crime -->
+
+    <owl:NamedIndividual rdf:about="http://www.movies.com/ontology#genre_crime">
+        <rdf:type rdf:resource="http://www.movies.com/ontology#Crime"/>
+        <rdf:type rdf:resource="http://www.movies.com/ontology#Genre"/>
+        <ontology:name>Crime</ontology:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movies.com/ontology#genre_dark_comedy -->
+
+    <owl:NamedIndividual rdf:about="http://www.movies.com/ontology#genre_dark_comedy">
+        <rdf:type rdf:resource="http://www.movies.com/ontology#Comedy"/>
+        <rdf:type rdf:resource="http://www.movies.com/ontology#Dark_Comedy"/>
+        <rdf:type rdf:resource="http://www.movies.com/ontology#Genre"/>
+        <ontology:name>Dark Comedy</ontology:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movies.com/ontology#genre_documentary -->
+
+    <owl:NamedIndividual rdf:about="http://www.movies.com/ontology#genre_documentary">
+        <rdf:type rdf:resource="http://www.movies.com/ontology#Documentary"/>
+        <rdf:type rdf:resource="http://www.movies.com/ontology#Genre"/>
+        <ontology:name>Documentry</ontology:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movies.com/ontology#genre_drama -->
+
+    <owl:NamedIndividual rdf:about="http://www.movies.com/ontology#genre_drama">
+        <rdf:type rdf:resource="http://www.movies.com/ontology#Drama"/>
+        <rdf:type rdf:resource="http://www.movies.com/ontology#Genre"/>
+        <ontology:name>Drama</ontology:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movies.com/ontology#genre_fantasy -->
+
+    <owl:NamedIndividual rdf:about="http://www.movies.com/ontology#genre_fantasy">
+        <rdf:type rdf:resource="http://www.movies.com/ontology#Fantasy"/>
+        <rdf:type rdf:resource="http://www.movies.com/ontology#Genre"/>
+        <ontology:name>Fantasy</ontology:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movies.com/ontology#genre_horror -->
+
+    <owl:NamedIndividual rdf:about="http://www.movies.com/ontology#genre_horror">
+        <rdf:type rdf:resource="http://www.movies.com/ontology#Genre"/>
+        <rdf:type rdf:resource="http://www.movies.com/ontology#Horror"/>
+        <ontology:name>Horror</ontology:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movies.com/ontology#genre_musical -->
+
+    <owl:NamedIndividual rdf:about="http://www.movies.com/ontology#genre_musical">
+        <rdf:type rdf:resource="http://www.movies.com/ontology#Genre"/>
+        <rdf:type rdf:resource="http://www.movies.com/ontology#Musical"/>
+        <ontology:name>Musical</ontology:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movies.com/ontology#genre_mystery -->
+
+    <owl:NamedIndividual rdf:about="http://www.movies.com/ontology#genre_mystery">
+        <rdf:type rdf:resource="http://www.movies.com/ontology#Genre"/>
+        <rdf:type rdf:resource="http://www.movies.com/ontology#Mystery"/>
+        <ontology:name>Mystery</ontology:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movies.com/ontology#genre_romance -->
+
+    <owl:NamedIndividual rdf:about="http://www.movies.com/ontology#genre_romance">
+        <rdf:type rdf:resource="http://www.movies.com/ontology#Genre"/>
+        <rdf:type rdf:resource="http://www.movies.com/ontology#Romance"/>
+        <ontology:name>Romance</ontology:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movies.com/ontology#genre_sci_fi -->
+
+    <owl:NamedIndividual rdf:about="http://www.movies.com/ontology#genre_sci_fi">
+        <rdf:type rdf:resource="http://www.movies.com/ontology#Genre"/>
+        <rdf:type rdf:resource="http://www.movies.com/ontology#Sci-Fi"/>
+        <ontology:name>Sci-Fi</ontology:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movies.com/ontology#genre_thriller -->
+
+    <owl:NamedIndividual rdf:about="http://www.movies.com/ontology#genre_thriller">
+        <rdf:type rdf:resource="http://www.movies.com/ontology#Genre"/>
+        <rdf:type rdf:resource="http://www.movies.com/ontology#Thriller"/>
+        <ontology:name>Thriller</ontology:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movies.com/ontology#german -->
+
+    <owl:NamedIndividual rdf:about="http://www.movies.com/ontology#german">
+        <rdf:type rdf:resource="http://www.movies.com/ontology#Spoken_Language"/>
+        <ontology:name>German</ontology:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movies.com/ontology#greg_nicotero -->
+
+    <owl:NamedIndividual rdf:about="http://www.movies.com/ontology#greg_nicotero">
+        <rdf:type rdf:resource="http://www.movies.com/ontology#Director"/>
+        <ontology:first_name>Greg</ontology:first_name>
+        <ontology:last_name>Nicotero</ontology:last_name>
+        <ontology:name>Greg Nicotero</ontology:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movies.com/ontology#herbru -->
+
+    <owl:NamedIndividual rdf:about="http://www.movies.com/ontology#herbru">
+        <rdf:type rdf:resource="http://www.movies.com/ontology#Spoken_Language"/>
+        <ontology:name>Herbru</ontology:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movies.com/ontology#hindi -->
+
+    <owl:NamedIndividual rdf:about="http://www.movies.com/ontology#hindi">
+        <rdf:type rdf:resource="http://www.movies.com/ontology#Spoken_Language"/>
+        <ontology:name>Hindi</ontology:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movies.com/ontology#italian -->
+
+    <owl:NamedIndividual rdf:about="http://www.movies.com/ontology#italian">
+        <rdf:type rdf:resource="http://www.movies.com/ontology#Spoken_Language"/>
+        <ontology:name>Italian</ontology:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movies.com/ontology#london -->
+
+    <owl:NamedIndividual rdf:about="http://www.movies.com/ontology#london">
+        <rdf:type rdf:resource="http://www.movies.com/ontology#City"/>
+        <ontology:name>London</ontology:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movies.com/ontology#malayalam -->
+
+    <owl:NamedIndividual rdf:about="http://www.movies.com/ontology#malayalam">
+        <rdf:type rdf:resource="http://www.movies.com/ontology#Spoken_Language"/>
+        <ontology:name>Malayalam</ontology:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movies.com/ontology#movie_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.movies.com/ontology#movie_1">
+        <rdf:type rdf:resource="http://www.movies.com/ontology#Movie"/>
+        <ontology:has_cast rdf:resource="http://www.movies.com/ontology#Melissa_McBride"/>
+        <ontology:has_cast rdf:resource="http://www.movies.com/ontology#Norman_Reedus"/>
+        <ontology:has_director rdf:resource="http://www.movies.com/ontology#greg_nicotero"/>
+        <ontology:has_genre rdf:resource="http://www.movies.com/ontology#genre_horror"/>
+        <ontology:has_script rdf:resource="http://www.movies.com/ontology#script_1"/>
+        <ontology:premiere rdf:resource="http://www.movies.com/ontology#premiere_1"/>
+        <ontology:sound_mix_by rdf:resource="http://www.movies.com/ontology#dolby_digital"/>
+        <ontology:spoken_language rdf:resource="http://www.movies.com/ontology#english"/>
+        <ontology:aspect_ratio>1.78 : 1</ontology:aspect_ratio>
+        <ontology:cinematographic_process>Super 16</ontology:cinematographic_process>
+        <ontology:color_info>Color</ontology:color_info>
+        <ontology:date_of_release rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2010</ontology:date_of_release>
+        <ontology:duration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">65</ontology:duration>
+        <ontology:print_format>Video (HDTV)</ontology:print_format>
+        <ontology:thumbnail>movie_1.jpg</ontology:thumbnail>
+        <ontology:title>The Walking Dead</ontology:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movies.com/ontology#movie_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.movies.com/ontology#movie_2">
+        <rdf:type rdf:resource="http://www.movies.com/ontology#Movie"/>
+        <ontology:has_genre rdf:resource="http://www.movies.com/ontology#genre_action"/>
+        <ontology:sound_mix_by rdf:resource="http://www.movies.com/ontology#dolby_digital"/>
+        <ontology:spoken_language rdf:resource="http://www.movies.com/ontology#english"/>
+        <ontology:cost>200, 000</ontology:cost>
+        <ontology:date_of_release rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2019</ontology:date_of_release>
+        <ontology:duration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">45</ontology:duration>
+        <ontology:thumbnail>movie_2.jpg</ontology:thumbnail>
+        <ontology:title>Avengers</ontology:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movies.com/ontology#movie_3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.movies.com/ontology#movie_3">
+        <rdf:type rdf:resource="http://www.movies.com/ontology#Movie"/>
+        <ontology:has_genre rdf:resource="http://www.movies.com/ontology#genre_animation"/>
+        <ontology:has_script rdf:resource="http://www.movies.com/ontology#script_2"/>
+        <ontology:spoken_language rdf:resource="http://www.movies.com/ontology#english"/>
+        <ontology:date_of_release rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1993</ontology:date_of_release>
+        <ontology:description>Jack Skellington, king of Halloween Town, discovers Christmas Town, but his attempts to bring Christmas to his home causes confusion.</ontology:description>
+        <ontology:duration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">76</ontology:duration>
+        <ontology:thumbnail>movie_3.jpg</ontology:thumbnail>
+        <ontology:title>Nightmare Before Christmas</ontology:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movies.com/ontology#premiere_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.movies.com/ontology#premiere_1">
+        <rdf:type rdf:resource="http://www.movies.com/ontology#Premiere"/>
+        <ontology:city>London</ontology:city>
+        <ontology:date rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2009</ontology:date>
+        <ontology:name>London Premiere</ontology:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movies.com/ontology#presentation_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.movies.com/ontology#presentation_1">
+        <rdf:type rdf:resource="http://www.movies.com/ontology#Presentation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movies.com/ontology#punjabi -->
+
+    <owl:NamedIndividual rdf:about="http://www.movies.com/ontology#punjabi">
+        <rdf:type rdf:resource="http://www.movies.com/ontology#Spoken_Language"/>
+        <ontology:name>Punjabi</ontology:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movies.com/ontology#russian -->
+
+    <owl:NamedIndividual rdf:about="http://www.movies.com/ontology#russian">
+        <rdf:type rdf:resource="http://www.movies.com/ontology#Spoken_Language"/>
+        <ontology:name>Russian</ontology:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movies.com/ontology#script_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.movies.com/ontology#script_1">
+        <rdf:type rdf:resource="http://www.movies.com/ontology#Script"/>
+        <ontology:has_character rdf:resource="http://www.movies.com/ontology#Carol_Peletier"/>
+        <ontology:has_character rdf:resource="http://www.movies.com/ontology#Daryl_Dixon"/>
+        <ontology:description>...</ontology:description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movies.com/ontology#script_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.movies.com/ontology#script_2">
+        <rdf:type rdf:resource="http://www.movies.com/ontology#Script"/>
+        <ontology:has_character rdf:resource="http://www.movies.com/ontology#Jack_Skellington"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movies.com/ontology#spanish -->
+
+    <owl:NamedIndividual rdf:about="http://www.movies.com/ontology#spanish">
+        <rdf:type rdf:resource="http://www.movies.com/ontology#Spoken_Language"/>
+        <ontology:name>Spanish</ontology:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movies.com/ontology#telugu -->
+
+    <owl:NamedIndividual rdf:about="http://www.movies.com/ontology#telugu">
+        <rdf:type rdf:resource="http://www.movies.com/ontology#Spoken_Language"/>
+        <ontology:name>Telugu</ontology:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movies.com/ontology#test -->
+
+    <owl:NamedIndividual rdf:about="http://www.movies.com/ontology#test">
+        <rdf:type rdf:resource="http://www.movies.com/ontology#Movie"/>
+        <ontology:has_genre rdf:resource="http://www.movies.com/ontology#genre_action"/>
+        <ontology:duration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">180</ontology:duration>
+        <ontology:thumbnail>test.jpg</ontology:thumbnail>
+        <ontology:title>Titanic</ontology:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.movies.com/ontology#urdu -->
+
+    <owl:NamedIndividual rdf:about="http://www.movies.com/ontology#urdu">
+        <rdf:type rdf:resource="http://www.movies.com/ontology#Spoken_Language"/>
+        <ontology:name>Urdu</ontology:name>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

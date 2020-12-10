@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#cc2034</color>
+    <color name="colorPrimaryDark">#701623</color>
+    <color name="colorAccent">#c81437</color>
+    <color name="tab_color_unselected">#C7C7C7</color>
+
+
+    <color name="color_green">#75B455</color>
+    <color name="main_green">#00A750</color>
+
+    <color name="search_bg_color">#f2f2f3</color>
+
+    <color name="dark_gray">#8b9cad</color>
+    <color name="light_gray">#e7ebee</color>
+
+    <color name="brown_login_bg">#c35518</color>
+    <color name="dark_brown_login_bg">#d35813</color>
+    <color name="forgot_bg_color">#f6f6f9</color>
+
+    <color name="text_gray">#333333</color>
+    <color name="text_gray_sec">#17395c</color>
+    <color name="reward_gray">#D7D7D7</color>
+
+    <color name="main_separator">#e7ebee</color>
+
+</resources>
