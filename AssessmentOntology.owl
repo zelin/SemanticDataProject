@@ -259,6 +259,16 @@
     
 
 
+    <!-- http://www.semanticweb.org/assessment#hasPaymentMethod -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/assessment#hasPaymentMethod">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/assessment#Order"/>
+        <rdfs:range rdf:resource="http://purl.org/goodrelations/v1#PaymentMethod"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/assessment#hasPrice -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/assessment#hasPrice">
@@ -793,7 +803,7 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/assessment#timestamp">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/assessment#Date"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTimeStamp"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#long"/>
     </owl:DatatypeProperty>
     
 
@@ -1353,6 +1363,7 @@ Examples: Parts and Labor, Parts</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/assessment#COD">
         <rdf:type rdf:resource="http://purl.org/goodrelations/v1#PaymentMethod"/>
+        <foaf:name>COD</foaf:name>
     </owl:NamedIndividual>
     
 
@@ -1361,6 +1372,7 @@ Examples: Parts and Labor, Parts</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/assessment#Card">
         <rdf:type rdf:resource="http://purl.org/goodrelations/v1#PaymentMethod"/>
+        <foaf:name>Card</foaf:name>
     </owl:NamedIndividual>
     
 
@@ -1369,6 +1381,7 @@ Examples: Parts and Labor, Parts</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/assessment#CardOnDelivery">
         <rdf:type rdf:resource="http://purl.org/goodrelations/v1#PaymentMethod"/>
+        <foaf:name>CardOnDelivery</foaf:name>
     </owl:NamedIndividual>
     
 
@@ -1377,6 +1390,7 @@ Examples: Parts and Labor, Parts</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/assessment#Cash">
         <rdf:type rdf:resource="http://purl.org/goodrelations/v1#PaymentMethod"/>
+        <foaf:name>Cash</foaf:name>
     </owl:NamedIndividual>
     
 
@@ -1385,6 +1399,7 @@ Examples: Parts and Labor, Parts</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/assessment#Ewallet">
         <rdf:type rdf:resource="http://purl.org/goodrelations/v1#PaymentMethod"/>
+        <foaf:name>Ewallet</foaf:name>
     </owl:NamedIndividual>
     
 
@@ -6400,6 +6415,127 @@ Examples: Parts and Labor, Parts</rdfs:comment>
     
 
 
+    <!-- http://www.semanticweb.org/assessment#date_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/assessment#date_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/assessment#Date"/>
+        <date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-12-10T16:00:41+00:00</date>
+        <time rdf:datatype="http://www.w3.org/2001/XMLSchema#string">16:00:41</time>
+        <timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1607615801</timestamp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/assessment#date_10 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/assessment#date_10">
+        <rdf:type rdf:resource="http://www.semanticweb.org/assessment#Date"/>
+        <date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-10-10T16:00:41+00:00</date>
+        <time rdf:datatype="http://www.w3.org/2001/XMLSchema#string">16:00:41</time>
+        <timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1602345641</timestamp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/assessment#date_11 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/assessment#date_11">
+        <rdf:type rdf:resource="http://www.semanticweb.org/assessment#Date"/>
+        <date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-10-18T16:00:41+00:00</date>
+        <time rdf:datatype="http://www.w3.org/2001/XMLSchema#string">16:00:41</time>
+        <timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1603036841</timestamp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/assessment#date_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/assessment#date_2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/assessment#Date"/>
+        <date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-11-16T16:00:41+00:00</date>
+        <time rdf:datatype="http://www.w3.org/2001/XMLSchema#string">16:00:41</time>
+        <timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1605542441</timestamp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/assessment#date_3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/assessment#date_3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/assessment#Date"/>
+        <date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-11-18T16:00:41+00:00</date>
+        <time rdf:datatype="http://www.w3.org/2001/XMLSchema#string">16:00:41</time>
+        <timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1605715241</timestamp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/assessment#date_4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/assessment#date_4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/assessment#Date"/>
+        <date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-11-25T16:00:41+00:00</date>
+        <time rdf:datatype="http://www.w3.org/2001/XMLSchema#string">16:00:41</time>
+        <timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1606320041</timestamp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/assessment#date_5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/assessment#date_5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/assessment#Date"/>
+        <date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-11-30T16:00:41+00:00</date>
+        <time rdf:datatype="http://www.w3.org/2001/XMLSchema#string">16:00:41</time>
+        <timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1606752041</timestamp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/assessment#date_6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/assessment#date_6">
+        <rdf:type rdf:resource="http://www.semanticweb.org/assessment#Date"/>
+        <date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-11-28T16:00:41+00:00</date>
+        <time rdf:datatype="http://www.w3.org/2001/XMLSchema#string">16:00:41</time>
+        <timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1606579241</timestamp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/assessment#date_7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/assessment#date_7">
+        <rdf:type rdf:resource="http://www.semanticweb.org/assessment#Date"/>
+        <date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-11-22T16:00:41+00:00</date>
+        <time rdf:datatype="http://www.w3.org/2001/XMLSchema#string">16:00:41</time>
+        <timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1606060841</timestamp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/assessment#date_8 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/assessment#date_8">
+        <rdf:type rdf:resource="http://www.semanticweb.org/assessment#Date"/>
+        <date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-12-03T16:00:41+00:00</date>
+        <time rdf:datatype="http://www.w3.org/2001/XMLSchema#string">16:00:41</time>
+        <timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1607011241</timestamp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/assessment#date_9 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/assessment#date_9">
+        <rdf:type rdf:resource="http://www.semanticweb.org/assessment#Date"/>
+        <date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-12-06T16:00:41+00:00</date>
+        <time rdf:datatype="http://www.w3.org/2001/XMLSchema#string">16:00:41</time>
+        <timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1607270441</timestamp>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/assessment#loc_1 -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/assessment#loc_1">
@@ -9222,6 +9358,7 @@ Examples: Parts and Labor, Parts</rdfs:comment>
         <hasCustomer rdf:resource="http://www.semanticweb.org/assessment#cus_1"/>
         <hasDeliveryLocation rdf:resource="http://www.semanticweb.org/assessment#loc_1"/>
         <hasOrganization rdf:resource="http://www.semanticweb.org/assessment#store_1"/>
+        <hasPaymentMethod rdf:resource="http://www.semanticweb.org/assessment#COD"/>
         <hasProduct rdf:resource="http://www.semanticweb.org/assessment#prod_105"/>
         <hasProduct rdf:resource="http://www.semanticweb.org/assessment#prod_147"/>
         <hasProduct rdf:resource="http://www.semanticweb.org/assessment#prod_176"/>
@@ -9246,10 +9383,12 @@ Examples: Parts and Labor, Parts</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/assessment#order_10">
         <rdf:type rdf:resource="http://www.semanticweb.org/assessment#Order"/>
+        <created rdf:resource="http://www.semanticweb.org/assessment#date_10"/>
         <hasContact rdf:resource="http://www.semanticweb.org/assessment#cus_10"/>
         <hasCustomer rdf:resource="http://www.semanticweb.org/assessment#cus_10"/>
         <hasDeliveryLocation rdf:resource="http://www.semanticweb.org/assessment#loc_10"/>
         <hasOrganization rdf:resource="http://www.semanticweb.org/assessment#store_10"/>
+        <hasPaymentMethod rdf:resource="http://www.semanticweb.org/assessment#COD"/>
         <hasProduct rdf:resource="http://www.semanticweb.org/assessment#prod_103"/>
         <hasProduct rdf:resource="http://www.semanticweb.org/assessment#prod_105"/>
         <hasProduct rdf:resource="http://www.semanticweb.org/assessment#prod_119"/>
@@ -9314,6 +9453,7 @@ Examples: Parts and Labor, Parts</rdfs:comment>
         <hasCustomer rdf:resource="http://www.semanticweb.org/assessment#cus_2"/>
         <hasDeliveryLocation rdf:resource="http://www.semanticweb.org/assessment#loc_2"/>
         <hasOrganization rdf:resource="http://www.semanticweb.org/assessment#store_2"/>
+        <hasPaymentMethod rdf:resource="http://www.semanticweb.org/assessment#Card"/>
         <hasProduct rdf:resource="http://www.semanticweb.org/assessment#prod_119"/>
         <hasProduct rdf:resource="http://www.semanticweb.org/assessment#prod_160"/>
         <hasProduct rdf:resource="http://www.semanticweb.org/assessment#prod_183"/>
@@ -9350,6 +9490,7 @@ Examples: Parts and Labor, Parts</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/assessment#order_3">
         <rdf:type rdf:resource="http://www.semanticweb.org/assessment#Order"/>
+        <created rdf:resource="http://www.semanticweb.org/assessment#date_3"/>
         <hasContact rdf:resource="http://www.semanticweb.org/assessment#cus_3"/>
         <hasCustomer rdf:resource="http://www.semanticweb.org/assessment#cus_3"/>
         <hasDeliveryLocation rdf:resource="http://www.semanticweb.org/assessment#loc_3"/>
@@ -9390,10 +9531,12 @@ Examples: Parts and Labor, Parts</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/assessment#order_4">
         <rdf:type rdf:resource="http://www.semanticweb.org/assessment#Order"/>
+        <created rdf:resource="http://www.semanticweb.org/assessment#date_4"/>
         <hasContact rdf:resource="http://www.semanticweb.org/assessment#cus_4"/>
         <hasCustomer rdf:resource="http://www.semanticweb.org/assessment#cus_4"/>
         <hasDeliveryLocation rdf:resource="http://www.semanticweb.org/assessment#loc_4"/>
         <hasOrganization rdf:resource="http://www.semanticweb.org/assessment#store_4"/>
+        <hasPaymentMethod rdf:resource="http://www.semanticweb.org/assessment#Cash"/>
         <hasProduct rdf:resource="http://www.semanticweb.org/assessment#prod_104"/>
         <hasProduct rdf:resource="http://www.semanticweb.org/assessment#prod_12"/>
         <hasProduct rdf:resource="http://www.semanticweb.org/assessment#prod_14"/>
@@ -9446,6 +9589,7 @@ Examples: Parts and Labor, Parts</rdfs:comment>
         <hasCustomer rdf:resource="http://www.semanticweb.org/assessment#cus_5"/>
         <hasDeliveryLocation rdf:resource="http://www.semanticweb.org/assessment#loc_5"/>
         <hasOrganization rdf:resource="http://www.semanticweb.org/assessment#store_5"/>
+        <hasPaymentMethod rdf:resource="http://www.semanticweb.org/assessment#Cash"/>
         <hasProduct rdf:resource="http://www.semanticweb.org/assessment#prod_101"/>
         <hasProduct rdf:resource="http://www.semanticweb.org/assessment#prod_108"/>
         <hasProduct rdf:resource="http://www.semanticweb.org/assessment#prod_13"/>
@@ -9488,6 +9632,7 @@ Examples: Parts and Labor, Parts</rdfs:comment>
         <hasCustomer rdf:resource="http://www.semanticweb.org/assessment#cus_6"/>
         <hasDeliveryLocation rdf:resource="http://www.semanticweb.org/assessment#loc_6"/>
         <hasOrganization rdf:resource="http://www.semanticweb.org/assessment#store_6"/>
+        <hasPaymentMethod rdf:resource="http://www.semanticweb.org/assessment#Cash"/>
         <hasProduct rdf:resource="http://www.semanticweb.org/assessment#prod_35"/>
         <hasProduct rdf:resource="http://www.semanticweb.org/assessment#prod_38"/>
         <deliveryPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#double">34.0</deliveryPrice>
@@ -9504,10 +9649,12 @@ Examples: Parts and Labor, Parts</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/assessment#order_7">
         <rdf:type rdf:resource="http://www.semanticweb.org/assessment#Order"/>
+        <created rdf:resource="http://www.semanticweb.org/assessment#date_7"/>
         <hasContact rdf:resource="http://www.semanticweb.org/assessment#cus_7"/>
         <hasCustomer rdf:resource="http://www.semanticweb.org/assessment#cus_7"/>
         <hasDeliveryLocation rdf:resource="http://www.semanticweb.org/assessment#loc_7"/>
         <hasOrganization rdf:resource="http://www.semanticweb.org/assessment#store_7"/>
+        <hasPaymentMethod rdf:resource="http://www.semanticweb.org/assessment#Ewallet"/>
         <hasProduct rdf:resource="http://www.semanticweb.org/assessment#prod_148"/>
         <hasProduct rdf:resource="http://www.semanticweb.org/assessment#prod_149"/>
         <hasProduct rdf:resource="http://www.semanticweb.org/assessment#prod_154"/>
@@ -9545,10 +9692,12 @@ Examples: Parts and Labor, Parts</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/assessment#order_8">
         <rdf:type rdf:resource="http://www.semanticweb.org/assessment#Order"/>
+        <created rdf:resource="http://www.semanticweb.org/assessment#date_8"/>
         <hasContact rdf:resource="http://www.semanticweb.org/assessment#cus_8"/>
         <hasCustomer rdf:resource="http://www.semanticweb.org/assessment#cus_8"/>
         <hasDeliveryLocation rdf:resource="http://www.semanticweb.org/assessment#loc_8"/>
         <hasOrganization rdf:resource="http://www.semanticweb.org/assessment#store_8"/>
+        <hasPaymentMethod rdf:resource="http://www.semanticweb.org/assessment#COD"/>
         <hasProduct rdf:resource="http://www.semanticweb.org/assessment#prod_172"/>
         <hasProduct rdf:resource="http://www.semanticweb.org/assessment#prod_195"/>
         <hasProduct rdf:resource="http://www.semanticweb.org/assessment#prod_28"/>
@@ -9577,10 +9726,12 @@ Examples: Parts and Labor, Parts</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/assessment#order_9">
         <rdf:type rdf:resource="http://www.semanticweb.org/assessment#Order"/>
+        <created rdf:resource="http://www.semanticweb.org/assessment#date_9"/>
         <hasContact rdf:resource="http://www.semanticweb.org/assessment#cus_9"/>
         <hasCustomer rdf:resource="http://www.semanticweb.org/assessment#cus_9"/>
         <hasDeliveryLocation rdf:resource="http://www.semanticweb.org/assessment#loc_9"/>
         <hasOrganization rdf:resource="http://www.semanticweb.org/assessment#store_9"/>
+        <hasPaymentMethod rdf:resource="http://www.semanticweb.org/assessment#CardOnDelivery"/>
         <hasProduct rdf:resource="http://www.semanticweb.org/assessment#prod_108"/>
         <hasProduct rdf:resource="http://www.semanticweb.org/assessment#prod_127"/>
         <hasProduct rdf:resource="http://www.semanticweb.org/assessment#prod_149"/>
@@ -12517,6 +12668,7 @@ Examples: Parts and Labor, Parts</rdfs:comment>
         <hasBrand rdf:resource="http://www.semanticweb.org/assessment#brand_186"/>
         <hasCategory rdf:resource="http://www.semanticweb.org/assessment#category_18"/>
         <hasOrganization rdf:resource="http://www.semanticweb.org/assessment#shop_31"/>
+        <hasPaymentMethod rdf:resource="http://www.semanticweb.org/assessment#Card"/>
         <hasPrice rdf:resource="http://www.semanticweb.org/assessment#price_141"/>
         <hasWeightType rdf:resource="http://www.semanticweb.org/assessment#weight_4"/>
         <barCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2147483647</barCode>
@@ -13661,6 +13813,7 @@ Examples: Parts and Labor, Parts</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/assessment#prod_198">
         <rdf:type rdf:resource="http://www.semanticweb.org/assessment#Product"/>
+        <created rdf:resource="http://www.semanticweb.org/assessment#date_2"/>
         <hasBrand rdf:resource="http://www.semanticweb.org/assessment#brand_123"/>
         <hasCategory rdf:resource="http://www.semanticweb.org/assessment#category_32"/>
         <hasOrganization rdf:resource="http://www.semanticweb.org/assessment#shop_21"/>
@@ -13855,6 +14008,7 @@ Examples: Parts and Labor, Parts</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/assessment#prod_25">
         <rdf:type rdf:resource="http://www.semanticweb.org/assessment#Product"/>
+        <created rdf:resource="http://www.semanticweb.org/assessment#date_1"/>
         <hasBrand rdf:resource="http://www.semanticweb.org/assessment#brand_179"/>
         <hasCategory rdf:resource="http://www.semanticweb.org/assessment#category_38"/>
         <hasOrganization rdf:resource="http://www.semanticweb.org/assessment#store_5"/>
@@ -14405,6 +14559,8 @@ Examples: Parts and Labor, Parts</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/assessment#prod_51">
         <rdf:type rdf:resource="http://www.semanticweb.org/assessment#Product"/>
+        <created rdf:resource="http://www.semanticweb.org/assessment#date_5"/>
+        <created rdf:resource="http://www.semanticweb.org/assessment#date_6"/>
         <hasBrand rdf:resource="http://www.semanticweb.org/assessment#brand_129"/>
         <hasCategory rdf:resource="http://www.semanticweb.org/assessment#category_12"/>
         <hasOrganization rdf:resource="http://www.semanticweb.org/assessment#store_25"/>
@@ -16917,7 +17073,13 @@ Examples: Parts and Labor, Parts</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/assessment#testOrder">
         <rdf:type rdf:resource="http://www.semanticweb.org/assessment#Order"/>
+        <created rdf:resource="http://www.semanticweb.org/assessment#date_11"/>
         <hasCustomer rdf:resource="http://www.semanticweb.org/assessment#cus_1"/>
+        <hasCustomer rdf:resource="http://www.semanticweb.org/assessment#cus_5"/>
+        <hasOrganization rdf:resource="http://www.semanticweb.org/assessment#store_2"/>
+        <hasPaymentMethod rdf:resource="http://www.semanticweb.org/assessment#CardOnDelivery"/>
+        <hasProduct rdf:resource="http://www.semanticweb.org/assessment#prod_1"/>
+        <hasProduct rdf:resource="http://www.semanticweb.org/assessment#prod_3"/>
         <totalPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#double">10.0</totalPrice>
     </owl:NamedIndividual>
     

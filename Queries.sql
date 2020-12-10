@@ -68,8 +68,7 @@ WHERE {
     ?p asm:hasPrice ?px .
     ?px asm:price ?price .   
   		
-	FILTER (?price > 20)
-    FILTER (?price < 30 )
+	FILTER (?price > 20 && ?price < 30 )
 }
 ORDER BY ASC(?a)
 
@@ -147,3 +146,116 @@ WHERE {
 }
 
 GROUP BY ?productName ?price ?product
+
+
+/*********** total purchases made within a specific time period sorted by payment methods namely via COD vs Card Payments ***********/
+
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl:  <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+PREFIX asm:  <http://www.semanticweb.org/assessment#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX as: <https://www.w3.org/ns/activitystreams#>
+PREFIX gr: <http://purl.org/goodrelations/v1#>
+
+select ?paymentMethodName (SUM(?p) AS ?totalPrice)
+WHERE
+{
+  ?order a asm:Order ; 		 
+		 asm:created ?created ;
+   		 asm:hasPaymentMethod ?paymentMethod ;
+      	 asm:hasProduct ?product .
+  
+  ?paymentMethod foaf:name ?paymentMethodName .
+  ?created asm:date ?date .
+
+  ?product asm:hasPrice ?price .
+  ?price asm:price ?p .
+  FILTER (?date > "2020-12-01T00:00:00+00:00"^^xsd:dateTime)
+}
+GROUP BY ?paymentMethodName ?created
+ORDER BY DESC(?totalPrice)
+
+
+/*********** 2-	Given a search parameter, If want to find out which products were sold and when having brand queried by search parameter within a specific time range or within locality ***********/
+
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl:  <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+PREFIX asm:  <http://www.semanticweb.org/assessment#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX as: <https://www.w3.org/ns/activitystreams#>
+PREFIX gr: <http://purl.org/goodrelations/v1#>
+
+# For 1 KM , 100 for 100 km
+# bottomLat = +000009
+# topLat = -0.000011
+# topLng = -0.000011
+# bottomLng = +0.000001
+
+select *
+WHERE
+{
+  ?order a asm:Order ;
+         asm:hasOrganization ?store ;
+		 asm:created ?created ;
+   		 asm:hasPaymentMethod ?paymentMethod ;
+      	 asm:hasProduct ?product .
+
+  ?created asm:date ?date .
+  ?store asm:hasLocation ?location.
+  ?location asm:latitude ?lat .
+  ?location asm:longitude ?lng .
+  
+  ?product asm:hasBrand ?brand .
+  ?brand foaf:name ?title
+
+  BIND ((+0.000009 * 100) + 25.263 as ?bottomLat) .
+  BIND ((-0.000011 * 100) + 25.263 as ?topLat) .
+  BIND ((-0.000011 * 100) + 55.324 as ?topLng) .
+  BIND ((+0.000001 * 100) + 55.324 as ?bottomLng) .
+
+  FILTER (
+    ?date > "2019-11-01T00:00:00+00:00"^^xsd:dateTime
+    && ?lat >= ?topLat && ?lat <= ?bottomLat
+    && ?lng >= ?topLng && ?lng <= ?bottomLng 
+    && regex(?title, "mson", "i" ) 
+  )
+}
+
+
+/*********** Top performing categories in United Kingdom ***********/
+
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl:  <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+PREFIX asm:  <http://www.semanticweb.org/assessment#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX as: <https://www.w3.org/ns/activitystreams#>
+
+select ?category (SUM(?p) AS ?totalPrice)
+WHERE
+{
+  ?order a asm:Order ; 		 
+         asm:hasOrganization ?store;
+		 asm:created ?created ;
+   		 asm:hasPaymentMethod ?paymentMethod ;
+      	 asm:hasProduct ?product .
+  
+  ?product asm:hasCategory ?category .
+  ?created asm:date ?date .
+  
+  ?store asm:hasLocation ?location.
+  ?location asm:country ?title.
+
+  ?product asm:hasPrice ?price .
+  ?price asm:price ?p .
+  
+  FILTER (regex(?title, "United Kingdom", "i" ))
+}
+GROUP BY ?category
+ORDER BY DESC(?totalPrice)
+
